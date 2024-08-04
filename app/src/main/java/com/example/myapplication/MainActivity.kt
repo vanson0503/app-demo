@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -31,11 +32,19 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    try {
+        val b = 3
+        var a = 4/b
+    }catch (e:Exception){
+        e.printStackTrace()
+    }
+    Log.e("TAG", "Greeting: sad", )
     Text(
-        text = "Hello $name!!!!",
+        text = "Hello $name!!!!12312423dsfsdf",
         modifier = modifier
     )
 }
+
 
 @Preview(showBackground = true)
 @Composable
@@ -44,3 +53,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+
