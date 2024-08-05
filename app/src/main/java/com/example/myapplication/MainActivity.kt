@@ -32,15 +32,17 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
+    val b = 0
+    var a = 4/b
     try {
-        val b = 3
+        val b = 0
         var a = 4/b
     }catch (e:Exception){
-        e.printStackTrace()
+        Log.e("ERROR", e.printStackTrace().toString(), )
     }
     Log.e("TAG", "Greeting: sad", )
     Text(
-        text = "Hello $name!!!!12312423dsfsdf",
+        text = "Hello $name!!!!12312423dsfsdf cdscdfdsfdsfdsfd",
         modifier = modifier
     )
 }
